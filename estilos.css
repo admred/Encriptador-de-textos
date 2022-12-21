@@ -1,0 +1,51 @@
+
+main {
+    width:1200px;
+
+    background: #f3f5fc;
+    margin: 0 auto;
+    display:flex;
+
+
+
+}
+
+.container {
+    padding: 40px;
+}
+
+.principal {
+
+    flex:2;
+
+    margin:10px;
+    padding:10px;
+    text-align:center;
+
+}
+
+.principal textarea {
+    border: 0;
+    background:#f3f5fc;
+    resize:none;
+    outline:none;
+}
+.lateral {
+    flex: 1;
+    margin:10px;
+    padding:10px;
+    text-align:center;
+
+}
+
+#logo {
+    text-align:left;
+    padding: 40px;
+}
+.lateral textarea {
+    border-radius: 20px;
+    padding: 5px;
+    border: 0;
+    outline:none;
+    resize:none;
+}
