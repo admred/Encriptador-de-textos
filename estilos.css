@@ -1,51 +1,107 @@
+/* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+/* https://icon-sets.iconify.design/bi/exclamation-circle-fill/ */
+
+* {
+    font-family: sans;
+}
+body {
+    background: #f3f5fc;
+    /* margin: 0 auto;*/
+    display:flex;
+    justify-content:space-around;
+}
+
+textarea {
+    border: 0;
+    outline:none;
+    resize:none;
+    margin: 10px 0;
+}
 
 main {
-    width:1200px;
-
-    background: #f3f5fc;
-    margin: 0 auto;
-    display:flex;
-
-
-
-}
-
-.container {
-    padding: 40px;
-}
-
-.principal {
-
     flex:2;
-
-    margin:10px;
-    padding:10px;
-    text-align:center;
-
+    display:flex;
+    /*flex-grow:1;*/
+    flex-direction:column;
+    margin:80px 0px 0px 0px;
+    padding:40px;
+    align-content:flex-start;
+    /* justify-content:space-around;*/
 }
 
-.principal textarea {
-    border: 0;
+main textarea {
     background:#f3f5fc;
-    resize:none;
-    outline:none;
-}
-.lateral {
-    flex: 1;
-    margin:10px;
-    padding:10px;
-    text-align:center;
+    font-size:30px;
+    font-color: #0A3871;
+    min-width:400px;
+    min-height:400px;
+    width:100%;
 
+}
+aside textarea {
+    font-size:20px;
+    min-width:300px;
+    min-height:400px;
+    width:100%;
+    }
+
+
+header {
+    padding: 40px 0;
 }
 
 #logo {
-    text-align:left;
-    padding: 40px;
+    float:top;
+    width:120px;
+    height:48px;
 }
-.lateral textarea {
-    border-radius: 20px;
-    padding: 5px;
-    border: 0;
-    outline:none;
-    resize:none;
+
+aside {
+    flex:1;
+    background:white;
+    box-shadow: 0px 24px 32px -8px rgba(0,0,0,0.08);
+    border-radius: 32px;
+    padding: 40px;
+    margin: 40px;
+}
+
+.encriptar {
+    background: #0a3871;
+    color:white;
+}
+.desencriptar{
+    background: #d8dfe8;
+    border: 1px solid #0a3871;
+}
+
+.botonera {
+    display:flex;
+    justify-content:space-around;
+}
+
+.button {
+    width:100%;
+    margin: 0 10px;
+    height: 50px;
+    border-radius:24px;
+    font-size:13px;
+}
+
+
+.copy {
+    text-align:center;
+    font-size:10px;
+    font-style:italic;
+    padding:40px 0 0 0;
+
+}
+
+.nota img {
+    vertical-align:middle;
+}
+
+.nota {
+    font-size:12px;
+    color: #495057;
+    padding: 15px 20px;
 }
