@@ -1,6 +1,6 @@
 # Encriptador-de-textos
+
 ## Encriptador de textos - Alura Challenges Oracle ONE
----
 
 - Descripcion -> [Youtube](https://www.aluracursos.com/challenges/challenge-one-logica/sprint01-construye-un-encriptador-texto-con-javascript)
 
