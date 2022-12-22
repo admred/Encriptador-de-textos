@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
-
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
-        <title>Encriptado</title>
+        <title>Encriptador de textos - Alura Challenges Oracle ONE</title>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="estilos.css">
+        <script rel="javascript" src="acciones.js"></script>
+        <!-- Google Fonts -->
 <!--
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 -->
     </head>
-
-
-
     <body>
         <header>
             <img src="imagenes/logo.svg" id="logo"/>
@@ -21,17 +21,29 @@
 
         <main>
 
-            <textarea name="encriptar-input" placeholder="Ingrese el texto aquí"></textarea>
+            <textarea id="texto-entrada" placeholder="Ingrese el texto aquí" required></textarea>
             <p class="nota"><img src="imagenes/exclamation-circle-fill.svg"/> Solo letras minúsculas y sin acento</p>
             <div class="botonera">
-                <input type="button" value="Encriptar" class="button encriptar">
-                <input type="button" value="Desencriptar" class="button desencriptar">
+                <button onclick="encriptar();" class="encriptar">Encriptar</button>
+                <button onclick="desencriptar();" class="desencriptar">Desencriptar</button>
             </div>
         </main>
 
         <aside>
-            <textarea name="desencriptar-input">Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat. Curabitur augue lorem, dapibus quis, laoreet et, pretium ac, nisi. Aenean magna nisl, mollis quis, molestie eu, feugiat in, orci. In hac habitasse platea dictumst.</textarea>
+            <div id="traduccion-area" hidden>
+                <textarea id="texto-salida" readonly disabled></textarea>
+                <button onclick="copiar();" class="copiar">Copiar</button>
+            </div>
+
+            <div id="mensaje-area">
+                <img src="imagenes/muneco.svg"/>
+                <h3 class="mensaje-header">Ningún mensaje fue encontrado</h3>
+                <p class="mensaje-body">Ingresa el texto que desees encriptar o desencriptar</p>
+            </div>
         </aside>
 
+        <footer>
+            <small class="copy();">Luciano &copy; 2022</small>
+        </footer>
     </body>
 </html>
