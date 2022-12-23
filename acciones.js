@@ -4,52 +4,52 @@
 const diccionario={'e':'enter','i':'imes','a':'ai','o':'ober','u':'ufat'};
 
 function encriptar(event){
-    const entrada=document.getElementById("texto-entrada");
-    const salida=document.getElementById("texto-salida");
+    const entrada=document.querySelector(".texto-entrada");
+    const salida=document.querySelector(".texto-salida");
 
     let buffer=entrada.value;
     if( buffer == false){
-        document.getElementById("traduccion-area").style.display = "none";
-        document.getElementById("mensaje-area").style.display = "block";
+        document.querySelector(".traduccion-area").style.display = "none";
+        document.querySelector(".mensaje-area").style.display = "flex";
         entrata.placeholder='Ingrese el texto aquí';
         return;
     }
 
     for(let e in diccionario){
-         buffer=buffer.replace(e,diccionario[e]);
+         buffer=buffer.replaceAll(e,diccionario[e]);
      }
      salida.value=buffer;
-     document.getElementById("traduccion-area").style.display = "block";
-     document.getElementById("mensaje-area").style.display = "none";
+     document.querySelector(".traduccion-area").style.display = "flex";
+     document.querySelector(".mensaje-area").style.display = "none";
 
 
 }
 
 function desencriptar(event){
-    const entrada=document.getElementById("texto-entrada");
-    const salida=document.getElementById("texto-salida");
+    const entrada=document.querySelector(".texto-entrada");
+    const salida=document.querySelector(".texto-salida");
 
 
     let buffer=entrada.value;
 
     if( buffer == false){
-        document.getElementById("traduccion-area").style.display = "none";
-        document.getElementById("mensaje-area").style.display = "block";
+        document.querySelector(".traduccion-area").style.display = "none";
+        document.querySelector(".mensaje-area").style.display = "flex";
         entrata.placeholder='Ingrese el texto aquí';
         return;
     }
 
     for(let e in diccionario){
-         buffer=buffer.replace(diccionario[e],e);
+         buffer=buffer.replaceAll(diccionario[e],e);
      }
      salida.value=buffer;
-     document.getElementById("traduccion-area").style.display = "block";
-     document.getElementById("mensaje-area").style.display = "none";
+     document.querySelector(".traduccion-area").style.display = "flex";
+     document.querySelector(".mensaje-area").style.display = "none";
 }
 
 function copiar(event){
      /* document.execCommand('copy'); */
-     const salida=document.getElementById("texto-salida");
+     const salida=document.querySelector(".texto-salida");
      navigator.clipboard.writeText(salida.value);
 }
 

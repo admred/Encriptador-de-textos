@@ -20,23 +20,22 @@
         </header>
 
         <main>
-
-            <textarea id="texto-entrada" placeholder="Ingrese el texto aquí" required></textarea>
+            <textarea class="texto-entrada" placeholder="Ingrese el texto aquí" required></textarea>
             <p class="nota"><img src="imagenes/exclamation-circle-fill.svg"/> Solo letras minúsculas y sin acento</p>
             <div class="botonera">
-                <button onclick="encriptar();" class="encriptar">Encriptar</button>
-                <button onclick="desencriptar();" class="desencriptar">Desencriptar</button>
+                <button class="button encriptar" onclick="encriptar();" >Encriptar</button>
+                <button class="button desencriptar" onclick="desencriptar();" >Desencriptar</button>
             </div>
         </main>
 
         <aside>
-            <div id="traduccion-area" hidden>
-                <textarea id="texto-salida" readonly disabled></textarea>
-                <button onclick="copiar();" class="copiar">Copiar</button>
+            <div class="traduccion-area">
+                <textarea class="texto-salida" readonly disabled></textarea>
+                <button class="button copiar" onclick="copiar();">Copiar</button>
             </div>
 
-            <div id="mensaje-area">
-                <img src="imagenes/muneco.svg"/>
+            <div class="mensaje-area">
+                <img class="mensaje-image"  src="imagenes/muneco.svg" width="240"/>
                 <h3 class="mensaje-header">Ningún mensaje fue encontrado</h3>
                 <p class="mensaje-body">Ingresa el texto que desees encriptar o desencriptar</p>
             </div>
