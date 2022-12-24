@@ -7,24 +7,23 @@
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="estilos.css">
         <script rel="javascript" src="acciones.js"></script>
+
         <!-- Google Fonts -->
-<!--
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
--->
     </head>
     <body>
         <header>
-            <img src="imagenes/logo.svg" id="logo"/>
+            <img src="imagenes/logo.svg" id="logo" alt="Logo del sitio"/>
         </header>
 
         <main>
-            <textarea class="texto-entrada" placeholder="Ingrese el texto aquí" required></textarea>
+            <textarea class="texto-entrada" placeholder="Ingrese el texto aquí" autofocus="true" spellcheck="false"></textarea>
             <p class="nota"><img src="imagenes/exclamation-circle-fill.svg"/> Solo letras minúsculas y sin acento</p>
             <div class="botonera">
-                <button class="button encriptar" onclick="encriptar();" >Encriptar</button>
-                <button class="button desencriptar" onclick="desencriptar();" >Desencriptar</button>
+                <button class="button encriptar" onclick="procesar(this)" >Encriptar</button>
+                <button class="button desencriptar" onclick="procesar(this)" >Desencriptar</button>
             </div>
         </main>
 
@@ -33,16 +32,15 @@
                 <textarea class="texto-salida" readonly disabled></textarea>
                 <button class="button copiar" onclick="copiar();">Copiar</button>
             </div>
-
             <div class="mensaje-area">
-                <img class="mensaje-image"  src="imagenes/muneco.svg" width="240"/>
-                <h3 class="mensaje-header">Ningún mensaje fue encontrado</h3>
+                <img class="mensaje-image"  src="imagenes/muneco.svg" width="240" alt="Imagen de que no se encontro texto de entrada"/>
+                <h3 class="mensaje-header">Ningún mensaje fué encontrado</h3>
                 <p class="mensaje-body">Ingresa el texto que desees encriptar o desencriptar</p>
             </div>
         </aside>
 
         <footer>
-            <small class="copy();">Luciano &copy; 2022</small>
+            <small class="copyright">&copy; Luciano - 2022</small>
         </footer>
     </body>
 </html>
